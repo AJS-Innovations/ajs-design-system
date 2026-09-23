@@ -1,9 +1,8 @@
 # Changelog
 
-## Unreleased
+## 0.1.1
 
 - Replace the admin workspace dropdown with the inspected right-side organization overlay; export OrganizationSwitcher with search, metadata, active state, and optional Manage action.
-
 - AppShell member/admin drawer widths, optional mobile brand, and skip-to-content target.
 - Mobile sidebar navigation dismisses the drawer, including when resizing to desktop.
 - Full /examples playground in the docs workspace with local member/admin workflows.

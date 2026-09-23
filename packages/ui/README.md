@@ -153,13 +153,13 @@ Search, sorting, and pagination operate on the supplied data in memory. This com
 </AppShell>
 ```
 
-`Sidebar` supports member (275px) and admin (225px) variants, nested items, optional user details, and callbacks. `AppShell` provides a mobile navigation drawer. In the latest workspace, set its `variant` to match `Sidebar`, use `mobileBrand` for the compact header, and provide `mainId` when multiple shells appear on one page. Sidebar selections dismiss the mobile drawer. These additions are unreleased and are not included in npm 0.1.0. Supply `onNavigate` when your router should handle navigation instead of standard links.
+`Sidebar` supports member (275px) and admin (225px) variants, nested items, optional user details, and callbacks. `AppShell` provides a mobile navigation drawer. Set its `variant` to match `Sidebar`, use `mobileBrand` for the compact header, and provide `mainId` when multiple shells appear on one page. Sidebar selections dismiss the mobile drawer. These additions are available starting in 0.1.1. Supply `onNavigate` when your router should handle navigation instead of standard links.
 
-### Organization switching (unreleased)
+### Organization switching
 
 `AdminToolbar` now opens a full-height right overlay when its workspace trigger is activated. Existing `workspaces: string[]` and `onWorkspaceChange(name)` integrations continue to work. Pass organization objects (`id`, `name`, optional `code`, `memberCount`, `logo`) for richer rows, `workspaceId` for selection by ID, `onOrganizationChange(organization)` for the selected object, and `onManageWorkspaces` to show Manage.
 
-The standalone `OrganizationSwitcher` accepts `organizations`, `selectedId`, `onSelect`, and optional `onManage`. It filters names locally, shows the current organization, traps focus, and closes on selection, Escape, or outside click. Width is 400px on desktop and full viewport below 640px. These changes are not yet in npm 0.1.0.
+The standalone `OrganizationSwitcher` accepts `organizations`, `selectedId`, `onSelect`, and optional `onManage`. It filters names locally, shows the current organization, traps focus, and closes on selection, Escape, or outside click. Width is 400px on desktop and full viewport below 640px. Available starting in 0.1.1.
 
 ## Theme and styling
 
@@ -199,4 +199,4 @@ Some decorative/status colors remain fixed. This release does not provide a comp
 
 The source workspace includes a Next.js documentation app with live previews, API notes, copyable snippets, design tokens, coverage notes, and Cmd+K / Ctrl+K search. Run `npm install` and `npm run dev` in the workspace root, then open `http://localhost:3000`.
 
-Version 0.1.0 is an initial release. Review changes before upgrading; APIs may change in subsequent 0.x releases.
+The library is in its initial 0.1.x release series. Review changes before upgrading; APIs may change in subsequent 0.x releases.

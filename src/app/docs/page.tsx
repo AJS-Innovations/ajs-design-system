@@ -72,7 +72,7 @@ export default function DocsOverview() {
           <Package className="ml-auto shrink-0 text-slate-400" size={16} />
         </div>
         <p className="mt-2 text-[10px] text-slate-400">
-          Version 0.1.0 · Available on npm.
+          Version 0.1.1 · Available on npm.
         </p>
         <div className="mt-12 border-t border-slate-200 pt-7">
           <div className="mb-5 flex items-center justify-between">

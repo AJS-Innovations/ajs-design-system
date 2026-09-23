@@ -8,7 +8,7 @@ export function InstallationGuide() {
         <h2 className="mb-3 text-lg font-semibold">1. Install the package</h2>
         <p className="mb-4 leading-6 text-slate-500">
           Install the published package{" "}
-          <code className="text-xs text-primary">@ajsinnovations/ui</code>. Version 0.1.0 is available on npm.
+          <code className="text-xs text-primary">@ajsinnovations/ui</code>. Version 0.1.1 is available on npm.
         </p>
         <CodeBlock label="terminal" code={"npm install @ajsinnovations/ui"} />
       </section>

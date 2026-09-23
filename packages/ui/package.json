@@ -1,6 +1,6 @@
 {
   "name": "@ajsinnovations/ui",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Standalone AJS React components and interface patterns built with Radix and Tailwind CSS.",
   "type": "module",
   "main": "./dist/index.cjs",

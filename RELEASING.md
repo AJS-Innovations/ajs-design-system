@@ -22,7 +22,7 @@ npm run typecheck
 npm run build
 npm exec -- playwright test
 npm run pack:ui
-npm publish ./ajsinnovations-ui-0.1.0.tgz --access public --dry-run
+npm publish ./ajsinnovations-ui-0.1.1.tgz --access public --dry-run
 ```
 
 Start the docs server before Playwright. Inspect the tarball contents and install the tarball in a separate React application before publishing. It should contain only the library build, tokens, package metadata, and documentation. It must not contain private reference data, credentials, or the documentation application.
@@ -30,7 +30,7 @@ Start the docs server before Playwright. Inspect the tarball contents and instal
 ## Publish the inspected artifact
 
 ```sh
-npm publish ./ajsinnovations-ui-0.1.0.tgz --access public
+npm publish ./ajsinnovations-ui-0.1.1.tgz --access public
 npm view @ajsinnovations/ui version
 ```
 

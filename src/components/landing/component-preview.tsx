@@ -49,7 +49,7 @@ export function InstallCommand() {
           ? "Copied. You're ready to install."
           : status === "failed"
             ? "Select and copy the command above."
-            : "v0.1.0 · Available on npm"}
+            : "v0.1.1 · Available on npm"}
       </p>
     </div>
   );
