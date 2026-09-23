@@ -1,0 +1,31 @@
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+@import "./tokens.css";
+@source "./**/*.{ts,tsx}";
+
+@theme inline {
+  --color-ajs-primary: var(--ajs-primary);
+  --color-ajs-foreground: var(--ajs-foreground);
+  --color-ajs-background: var(--ajs-background);
+  --color-ajs-card: var(--ajs-card);
+  --color-ajs-subtle: var(--ajs-subtle);
+  --color-ajs-border: var(--ajs-border);
+  --color-ajs-divider: var(--ajs-divider);
+  --color-ajs-muted: var(--ajs-muted);
+  --color-ajs-sidebar: var(--ajs-sidebar);
+  --color-ajs-success: var(--ajs-success);
+  --color-ajs-danger: var(--ajs-danger);
+}
+
+@layer base {
+  .ajs-root { font-family: var(--ajs-font); font-size: 13px; line-height: 1.5; color: var(--ajs-foreground); }
+  .ajs-root *, .ajs-root *::before, .ajs-root *::after { box-sizing: border-box; border: 0 solid var(--ajs-divider); }
+  .ajs-root :where(button, input, select, textarea) { font: inherit; color: inherit; }
+  .ajs-root :where(button) { background-color: transparent; }
+  .ajs-root :where(h1, h2, h3, h4, p, ul, ol) { margin: 0; padding: 0; }
+  .ajs-root :where(a) { color: inherit; text-decoration: inherit; }
+  .ajs-root :where(img, svg) { vertical-align: middle; }
+  .ajs-root :where(button, [role=button]) { cursor: pointer; }
+  .ajs-root :where(button:disabled) { cursor: default; }
+}

@@ -1,0 +1,73 @@
+{
+  "name": "@ajsinnovations/ui",
+  "version": "0.1.0",
+  "description": "Standalone AJS React components and interface patterns built with Radix and Tailwind CSS.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": {
+        "import": "./dist/index.d.ts",
+        "require": "./dist/index.d.cts"
+      },
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./styles.css": "./dist/styles.css",
+    "./tokens.css": "./src/tokens.css"
+  },
+  "files": [
+    "dist",
+    "src/tokens.css",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "build": "tsup && tailwindcss -i src/styles.css -o dist/styles.css --minify",
+    "prepack": "npm run build"
+  },
+  "peerDependencies": {
+    "react": "^18.3.0 || ^19.0.0",
+    "react-dom": "^18.3.0 || ^19.0.0"
+  },
+  "dependencies": {
+    "radix-ui": "^1.4.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.3.1",
+    "lucide-react": "^0.468.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "@tailwindcss/cli": "^4.0.0",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.9.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "keywords": [
+    "react",
+    "components",
+    "design-system",
+    "tailwindcss",
+    "radix-ui",
+    "typescript",
+    "ajsinnovations"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AJS-Innovations/ajs-design-system.git",
+    "directory": "packages/ui"
+  },
+  "homepage": "https://github.com/AJS-Innovations/ajs-design-system#readme",
+  "bugs": {
+    "url": "https://github.com/AJS-Innovations/ajs-design-system/issues"
+  }
+}

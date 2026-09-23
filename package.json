@@ -1,0 +1,44 @@
+{
+  "name": "ajs-design-system",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "build:ui": "npm run build --workspace @ajsinnovations/ui",
+    "pack:ui": "npm pack --workspace @ajsinnovations/ui --pack-destination .",
+    "format": "prettier --write src packages/ui/src packages/ui/tsup.config.ts"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.2.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "cmdk": "^1.1.1",
+    "lucide-react": "^0.468.0",
+    "next": "16.3.6",
+    "radix-ui": "^1.6.7",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "tailwind-merge": "^3.3.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@tailwindcss/cli": "^4.3.3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.6",
+    "prettier": "^3.9.9",
+    "tailwindcss": "^4",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.0"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}

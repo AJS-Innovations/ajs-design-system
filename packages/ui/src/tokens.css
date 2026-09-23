@@ -1,0 +1,14 @@
+:root {
+  --ajs-primary: #05152f;
+  --ajs-foreground: #1e293b;
+  --ajs-background: #f1f5f9;
+  --ajs-card: #ffffff;
+  --ajs-subtle: #f9f9fb;
+  --ajs-border: #cbd5e1;
+  --ajs-divider: #e2e8f0;
+  --ajs-muted: #64748b;
+  --ajs-sidebar: #0f172a;
+  --ajs-success: #16a34a;
+  --ajs-danger: #dc2626;
+  --ajs-font: "Switzer", ui-sans-serif, system-ui, sans-serif;
+}
