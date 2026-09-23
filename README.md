@@ -44,3 +44,7 @@ Playwright expects the documentation server on port 3000 and Chrome installed. T
 ## Release
 
 See [RELEASING.md](RELEASING.md). The root is private; only `packages/ui` is published.
+
+## Deploy the docs
+
+Use the root [Dockerfile](Dockerfile) with Coolify's Dockerfile build pack and port `3000`. See [DEPLOYMENT.md](DEPLOYMENT.md) for the exact settings and local Docker commands.
