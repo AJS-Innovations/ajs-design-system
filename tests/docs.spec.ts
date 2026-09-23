@@ -12,7 +12,7 @@ test('every documentation route renders with no client exceptions', async ({ pag
 });
 
 test('command palette searches and navigates using the keyboard', async ({ page }) => {
-  await page.goto('/');
+  await page.goto('/docs');
   await page.keyboard.press('Control+k');
   const dialog = page.getByRole('dialog');
   await expect(dialog).toBeVisible();
@@ -56,7 +56,7 @@ test('dialog traps focus and restores it', async ({ page }) => {
 
 test('mobile docs do not overflow and navigation works', async ({ page }) => {
   await page.setViewportSize({width:390,height:844});
-  for(const path of ['/','/docs/button','/docs/data-table','/docs/sidebar']) {
+  for(const path of ['/','/docs','/docs/button','/docs/data-table','/docs/sidebar']) {
     await page.goto(path);
     expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
   }
@@ -64,4 +64,18 @@ test('mobile docs do not overflow and navigation works', async ({ page }) => {
   await page.getByRole('dialog').getByRole('link',{name:'Input & field'}).click();
   await expect(page).toHaveURL(/\/docs\/input$/);
   await expect(page.getByRole('dialog')).not.toBeVisible();
+});
+
+test('landing links to docs and the live component preview works', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.getByRole('heading', {name:'Less setup. More building.'})).toBeVisible();
+  await page.getByRole('button', {name:'Save changes'}).click();
+  await expect(page.getByRole('status')).toHaveText('Saved in this preview.');
+  await page.getByRole('tab', {name:'Members',exact:true}).click();
+  await expect(page.getByText('Jamie Chen')).toBeVisible();
+  await page.getByRole('link',{name:'Start building'}).click();
+  await expect(page).toHaveURL(/\/docs$/);
+  await expect(page.getByRole('navigation',{name:'Documentation'})).toBeVisible();
+  await page.getByRole('link',{name:'Overview',exact:true}).click();
+  await expect(page).toHaveURL(/\/docs$/);
 });
