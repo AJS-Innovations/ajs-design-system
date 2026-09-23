@@ -307,7 +307,7 @@ export function CoverageGuide() {
       <h2 className="text-lg font-semibold">Example coverage and remaining gaps</h2>
       <p className="leading-6 text-slate-500">The <Link href="/examples" className="underline">app shell playground</Link> combines member and admin navigation, multicolored metrics, charts, searchable member tables, local member creation, connected apps, account settings, and notification/detail dialogs. All records are fictional and reset on reload.</p>
       <ul className="list-disc space-y-3 pl-5 leading-6 text-slate-500">
-        <li>Organization switching currently uses the toolbar dropdown. A reusable organization side panel and generic sheet component are not implemented.</li>
+        <li>Organization switching now matches the inspected right-hand overlay, including search, organization metadata, and active state. A generic sheet component is not yet provided.</li>
         <li>Multi-selection is demonstrated with checkboxes; a searchable multi-select component is not implemented.</li>
         <li>Role-permission editors, event creation, payment/report flows, and populated scheme/donation forms still need read-only inspection before exact coverage can be claimed.</li>
         <li>The notification empty state is a local composition. Populated notification layouts and source error/loading states have not been verified.</li>

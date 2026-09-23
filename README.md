@@ -48,3 +48,7 @@ See [RELEASING.md](RELEASING.md). The root is private; only `packages/ui` is pub
 ## Deploy the docs
 
 Use the root [Dockerfile](Dockerfile) with Coolify's Dockerfile build pack and port `3000`. See [DEPLOYMENT.md](DEPLOYMENT.md) for the exact settings and local Docker commands.
+
+## Keep preview code in sync
+
+The component Code tabs are generated from the actual live examples in `src/components/docs/component-demo.tsx`. Run `npm run docs:generate` after editing examples; development startup and production builds also regenerate them. Run `npm run docs:check` to verify freshness and typecheck every displayed snippet independently. Do not edit `src/lib/demo-code.generated.ts` by hand.

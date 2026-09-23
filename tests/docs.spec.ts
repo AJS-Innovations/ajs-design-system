@@ -79,3 +79,15 @@ test('landing links to docs and the live component preview works', async ({ page
   await page.getByRole('link',{name:'Overview',exact:true}).click();
   await expect(page).toHaveURL(/\/docs$/);
 });
+
+test('timeline code includes every preview timestamp and entry', async ({ page }) => {
+  await page.goto('/docs/timeline');
+  const preview=page.getByRole('tabpanel');
+  const dates=await preview.locator('time').allTextContents();
+  const activities=await preview.locator('li p.font-medium').allTextContents();
+  expect(dates).toEqual(['23 Sep 2026, 10:30 AM','22 Sep 2026, 4:15 PM','21 Sep 2026, 9:00 AM']);
+  await page.getByRole('tab',{name:/^code$/i}).click();
+  const code=page.getByRole('tabpanel').locator('code');
+  for(const value of [...dates,...activities]) await expect(code).toContainText(value);
+  await expect(code).toContainText('export default function Example()');
+});

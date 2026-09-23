@@ -10,7 +10,11 @@
     "typecheck": "tsc --noEmit",
     "build:ui": "npm run build --workspace @ajsinnovations/ui",
     "pack:ui": "npm pack --workspace @ajsinnovations/ui --pack-destination .",
-    "format": "prettier --write src packages/ui/src packages/ui/tsup.config.ts"
+    "format": "prettier --write src packages/ui/src packages/ui/tsup.config.ts",
+    "docs:generate": "node scripts/generate-demo-code.mjs",
+    "docs:check": "node scripts/generate-demo-code.mjs --check",
+    "predev": "npm run docs:generate",
+    "prebuild": "npm run docs:generate"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",

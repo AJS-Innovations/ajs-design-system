@@ -249,7 +249,8 @@ export function ShellExample() {
           </div>
           <UI.AdminToolbar
             workspace={workspace}
-            workspaces={["Acme Network", "Design Team"]}
+            workspaces={[{id:"acme",name:"Acme Network",code:"000001",memberCount:people.length},{id:"design",name:"Design Team",code:"000002",memberCount:people.length}]}
+            onManageWorkspaces={()=>navigate("settings")}
             onWorkspaceChange={(value) => {
               setWorkspace(value);
               setNotice(

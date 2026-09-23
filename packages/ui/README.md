@@ -62,7 +62,7 @@ Switzer is supplied by [Fontshare](https://www.fontshare.com/fonts/switzer) unde
 | Dialog     | `Dialog`, `DialogTrigger`, `DialogClose`, `DialogContent`, `DialogHeader`, `DialogTitle`, `DialogDescription`, `DialogBody`, `DialogFooter` |
 | Menus      | `DropdownMenu`, `DropdownMenuTrigger`, `DropdownMenuContent`, `DropdownMenuItem`, `DropdownMenuSeparator`, `Tooltip`                        |
 | Data       | `DataTable`, `ChartPanel`, `Timeline`, `DetailList`, `MetricCard`                                                                           |
-| Layout     | `Sidebar`, `AppShell`, `PageHeader`, `AdminToolbar`, `ListToolbar`, `SettingsGroup`                                                         |
+| Layout     | `Sidebar`, `AppShell`, `PageHeader`, `AdminToolbar`, `OrganizationSwitcher`, `ListToolbar`, `SettingsGroup`                                                         |
 | Patterns   | `EmptyState`, `FilterChip`, `AppCard`, `ProfileCard`, `IdentityCard`, `AuthCard`                                                            |
 
 ### Buttons
@@ -154,6 +154,12 @@ Search, sorting, and pagination operate on the supplied data in memory. This com
 ```
 
 `Sidebar` supports member (275px) and admin (225px) variants, nested items, optional user details, and callbacks. `AppShell` provides a mobile navigation drawer. In the latest workspace, set its `variant` to match `Sidebar`, use `mobileBrand` for the compact header, and provide `mainId` when multiple shells appear on one page. Sidebar selections dismiss the mobile drawer. These additions are unreleased and are not included in npm 0.1.0. Supply `onNavigate` when your router should handle navigation instead of standard links.
+
+### Organization switching (unreleased)
+
+`AdminToolbar` now opens a full-height right overlay when its workspace trigger is activated. Existing `workspaces: string[]` and `onWorkspaceChange(name)` integrations continue to work. Pass organization objects (`id`, `name`, optional `code`, `memberCount`, `logo`) for richer rows, `workspaceId` for selection by ID, `onOrganizationChange(organization)` for the selected object, and `onManageWorkspaces` to show Manage.
+
+The standalone `OrganizationSwitcher` accepts `organizations`, `selectedId`, `onSelect`, and optional `onManage`. It filters names locally, shows the current organization, traps focus, and closes on selection, Escape, or outside click. Width is 400px on desktop and full viewport below 640px. These changes are not yet in npm 0.1.0.
 
 ## Theme and styling
 
