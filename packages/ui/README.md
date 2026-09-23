@@ -153,7 +153,7 @@ Search, sorting, and pagination operate on the supplied data in memory. This com
 </AppShell>
 ```
 
-`Sidebar` supports member (275px) and admin (225px) variants, nested items, optional user details, and callbacks. `AppShell` provides a mobile navigation drawer. Supply `onNavigate` when your router should handle navigation instead of standard links.
+`Sidebar` supports member (275px) and admin (225px) variants, nested items, optional user details, and callbacks. `AppShell` provides a mobile navigation drawer. In the latest workspace, set its `variant` to match `Sidebar`, use `mobileBrand` for the compact header, and provide `mainId` when multiple shells appear on one page. Sidebar selections dismiss the mobile drawer. These additions are unreleased and are not included in npm 0.1.0. Supply `onNavigate` when your router should handle navigation instead of standard links.
 
 ## Theme and styling
 

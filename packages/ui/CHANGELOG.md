@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- AppShell member/admin drawer widths, optional mobile brand, and skip-to-content target.
+- Mobile sidebar navigation dismisses the drawer, including when resizing to desktop.
+- Full /examples playground in the docs workspace with local member/admin workflows.
+
 ## 0.1.0
 
 Initial release of the standalone AJS component library.
